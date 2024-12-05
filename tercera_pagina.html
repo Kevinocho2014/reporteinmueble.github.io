@@ -1,0 +1,222 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sistemas</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background: linear-gradient(45deg, #fcb900, #ff4b3e, #9b59b6); /* Gradiente de amarillo, rojo y violeta */
+            color: white;
+            text-align: center;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            background-size: cover;
+            background-repeat: no-repeat;
+            background-position: center;
+        }
+
+        .container {
+            max-width: 1000px;
+            width: 90%;
+            text-align: center;
+            background-color: rgba(0, 0, 0, 0.7); /* Fondo oscuro con transparencia */
+            border-radius: 10px;
+            padding: 20px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5);
+            overflow: auto;
+        }
+
+        h1 {
+            margin-bottom: 20px;
+            font-size: 2rem;
+            color: #fff;
+            text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.3);
+        }
+
+        /* Contenedor para organizar los cuadros en dos filas */
+        .row {
+            display: flex;
+            justify-content: space-around;
+            flex-wrap: wrap; /* Permitir que los elementos se ajusten en pantallas más pequeñas */
+            margin-bottom: 20px;
+        }
+
+        .item {
+            display: inline-block;
+            margin: 15px;
+            padding: 20px;
+            background-color: rgba(255, 255, 255, 0.1);
+            border-radius: 10px;
+            text-align: left;
+            width: 200px;
+            box-sizing: border-box;
+        }
+
+        .item h2 {
+            font-size: 16px;
+            margin-bottom: 10px;
+            text-align: center; /* Centrado del encabezado */
+        }
+
+        .radio-group {
+            display: flex;
+            flex-direction: column;
+        }
+
+        .radio-group label {
+            margin-bottom: 5px;
+            font-size: 14px;
+            cursor: pointer;
+        }
+
+        .radio-group input[type="radio"] {
+            margin-right: 10px;
+        }
+
+        button {
+            margin-top: 20px;
+            padding: 15px 30px;
+            font-size: 16px;
+            color: white;
+            background-color: #9b59b6; /* Color violeta */
+            border: 2px solid #9b59b6; /* Borde violeta */
+            border-radius: 5px;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+            width: 100%;
+            max-width: 300px;
+        }
+
+        button:hover {
+            background-color: white;
+            color: #9b59b6; /* Color violeta al hacer hover */
+            transform: scale(1.05); /* Efecto de animación al hacer hover */
+        }
+
+        /* Animación de ondas en el fondo */
+        @keyframes waveAnimation {
+            0% { transform: translateX(0); }
+            100% { transform: translateX(-100%); }
+        }
+
+        .wave {
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 100%;
+            height: 100px;
+            background: url('https://www.transparenttextures.com/patterns/diagonal-stripes.png') repeat-x;
+            animation: waveAnimation 5s linear infinite;
+            z-index: -1;
+        }
+
+        /* Media queries para mejorar la visualización en pantallas pequeñas */
+        @media (max-width: 768px) {
+            h1 {
+                font-size: 1.5rem;
+            }
+
+            .item {
+                width: 45%;
+            }
+
+            button {
+                padding: 12px 25px;
+                font-size: 14px;
+            }
+        }
+
+        @media (max-width: 480px) {
+            h1 {
+                font-size: 1.2rem;
+            }
+
+            .item {
+                width: 90%;
+                margin: 10px 0;
+            }
+
+            button {
+                padding: 10px 20px;
+                font-size: 12px;
+            }
+        }
+
+    </style>
+</head>
+<body>
+    <div class="wave"></div>
+    <div class="container">
+        <h1>Sistemas</h1>
+        <div class="row">
+            <div class="item">
+                <h2>Computadora</h2>
+                <div class="radio-group">
+                    <label><input type="radio" name="computadora" value="muy_insatisfecho"> Muy insatisfecho</label>
+                    <label><input type="radio" name="computadora" value="insatisfecho"> Insatisfecho</label>
+                    <label><input type="radio" name="computadora" value="regular"> Regular</label>
+                </div>
+            </div>
+            <div class="item">
+                <h2>Proyector</h2>
+                <div class="radio-group">
+                    <label><input type="radio" name="proyector" value="muy_insatisfecho"> Muy insatisfecho</label>
+                    <label><input type="radio" name="proyector" value="insatisfecho"> Insatisfecho</label>
+                    <label><input type="radio" name="proyector" value="regular"> Regular</label>
+                </div>
+            </div>
+            <div class="item">
+                <h2>Cableado de red</h2>
+                <div class="radio-group">
+                    <label><input type="radio" name="cableado" value="muy_insatisfecho"> Muy insatisfecho</label>
+                    <label><input type="radio" name="cableado" value="insatisfecho"> Insatisfecho</label>
+                    <label><input type="radio" name="cableado" value="regular"> Regular</label>
+                </div>
+            </div>
+            <div class="item">
+                <h2>Conexiones de datos</h2>
+                <div class="radio-group">
+                    <label><input type="radio" name="datos" value="muy_insatisfecho"> Muy insatisfecho</label>
+                    <label><input type="radio" name="datos" value="insatisfecho"> Insatisfecho</label>
+                    <label><input type="radio" name="datos" value="regular"> Regular</label>
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="item">
+                <h2>Enrutador de internet (router)</h2>
+                <div class="radio-group">
+                    <label><input type="radio" name="router" value="muy_insatisfecho"> Muy insatisfecho</label>
+                    <label><input type="radio" name="router" value="insatisfecho"> Insatisfecho</label>
+                    <label><input type="radio" name="router" value="regular"> Regular</label>
+                </div>
+            </div>
+            <div class="item">
+                <h2>Bocinas o sistema de sonido</h2>
+                <div class="radio-group">
+                    <label><input type="radio" name="sonido" value="muy_insatisfecho"> Muy insatisfecho</label>
+                    <label><input type="radio" name="sonido" value="insatisfecho"> Insatisfecho</label>
+                    <label><input type="radio" name="sonido" value="regular"> Regular</label>
+                </div>
+            </div>
+            <div class="item">
+                <h2>Pantalla (para proyecciones)</h2>
+                <div class="radio-group">
+                    <label><input type="radio" name="pantalla" value="muy_insatisfecho"> Muy insatisfecho</label>
+                    <label><input type="radio" name="pantalla" value="insatisfecho"> Insatisfecho</label>
+                    <label><input type="radio" name="pantalla" value="regular"> Regular</label>
+                </div>
+            </div>
+        </div>
+        <button onclick="window.location.href='quinta_pagina.html';">Enviar Reporte</button>
+    </div>
+</body>
+</html>

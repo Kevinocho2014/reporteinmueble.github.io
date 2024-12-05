@@ -1,0 +1,236 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Planta Física y Mantenimiento</title>
+    <style>
+        /* Establecer el fondo para cubrir toda la pantalla */
+        html, body {
+            margin: 0;
+            padding: 0;
+            height: 100%; /* Asegurar que el contenido ocupe todo el alto de la pantalla */
+            background: linear-gradient(45deg, #fcb900, #ff4b3e, #9b59b6); /* Gradiente de amarillo, rojo y violeta */
+            background-size: cover; /* Fondo que cubre toda la pantalla */
+            background-attachment: fixed; /* El fondo se mantiene fijo al hacer scroll */
+            color: white;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .container {
+            max-width: 1000px;
+            width: 90%; /* Asegura que el contenedor no se salga en pantallas pequeñas */
+            padding: 20px;
+            background-color: rgba(0, 0, 0, 0.7); /* Fondo oscuro con transparencia */
+            border-radius: 10px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5);
+            overflow: auto; /* Permitir scroll si es necesario */
+            max-height: 90vh; /* Limitar el alto del contenedor al 90% de la altura de la ventana */
+        }
+
+        h1 {
+            margin-bottom: 20px;
+            font-size: 2rem;
+            color: #fff;
+            text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.3);
+            text-transform: uppercase; /* En mayúsculas */
+        }
+
+        /* Contenedor para organizar los cuadros en tres filas */
+        .row {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-evenly;
+            margin-bottom: 20px;
+        }
+
+        .item {
+            display: inline-block;
+            margin: 10px;
+            padding: 15px;
+            background-color: rgba(255, 255, 255, 0.1);
+            border-radius: 10px;
+            text-align: left;
+            width: 22%; /* Ajustado para que los cuadros ocupen el 22% del ancho */
+        }
+
+        .item h2 {
+            font-size: 16px;
+            margin-bottom: 10px;
+            text-align: center; /* Centrado del encabezado */
+        }
+
+        .radio-group {
+            display: flex;
+            flex-direction: column;
+        }
+
+        .radio-group label {
+            margin-bottom: 5px;
+            font-size: 12px; /* Reducir el tamaño de las opciones */
+            cursor: pointer;
+        }
+
+        .radio-group input[type="radio"] {
+            margin-right: 10px;
+        }
+
+        button {
+            margin-top: 20px;
+            padding: 15px 30px;
+            font-size: 16px;
+            color: white;
+            background-color: #9b59b6; /* Color violeta */
+            border: 2px solid #9b59b6; /* Borde violeta */
+            border-radius: 5px;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            display: block;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        button:hover {
+            background-color: white;
+            color: #9b59b6; /* Color violeta al hacer hover */
+            transform: scale(1.05); /* Efecto de animación al hacer hover */
+        }
+
+        /* Animación de ondas en el fondo */
+        @keyframes waveAnimation {
+            0% { transform: translateX(0); }
+            100% { transform: translateX(-100%); }
+        }
+
+        .wave {
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 100%;
+            height: 100px;
+            background: url('https://www.transparenttextures.com/patterns/diagonal-stripes.png') repeat-x;
+            animation: waveAnimation 5s linear infinite;
+            z-index: -1;
+        }
+
+        /* Media queries para pantallas más pequeñas */
+        @media (max-width: 768px) {
+            .item {
+                width: 45%; /* Los cuadros ocupan el 45% del ancho en pantallas medianas */
+            }
+
+            h1 {
+                font-size: 1.5rem;
+            }
+
+            button {
+                padding: 12px 25px;
+                font-size: 14px;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .item {
+                width: 90%; /* Los cuadros ocupan el 90% del ancho en pantallas pequeñas */
+            }
+
+            h1 {
+                font-size: 1.2rem;
+            }
+
+            .radio-group label {
+                font-size: 10px; /* Reducir el tamaño de las etiquetas */
+            }
+
+            button {
+                padding: 10px 20px;
+                font-size: 12px;
+            }
+        }
+
+    </style>
+</head>
+<body>
+    <div class="wave"></div>
+    <div class="container">
+        <h1>Planta Física y Mantenimiento</h1>
+        
+        <!-- Fila superior con 4 cuadros -->
+        <div class="row">
+            <div class="item">
+                <h2>Contactos Eléctricos</h2>
+                <div class="radio-group">
+                    <label><input type="radio" name="contactos" value="muy_insatisfecho"> Muy insatisfecho</label>
+                    <label><input type="radio" name="contactos" value="insatisfecho"> Insatisfecho</label>
+                    <label><input type="radio" name="contactos" value="regular"> Regular</label>
+                </div>
+            </div>
+            <div class="item">
+                <h2>Sillas</h2>
+                <div class="radio-group">
+                    <label><input type="radio" name="sillas" value="muy_insatisfecho"> Muy insatisfecho</label>
+                    <label><input type="radio" name="sillas" value="insatisfecho"> Insatisfecho</label>
+                    <label><input type="radio" name="sillas" value="regular"> Regular</label>
+                </div>
+            </div>
+            <div class="item">
+                <h2>Escritorios</h2>
+                <div class="radio-group">
+                    <label><input type="radio" name="escritorios" value="muy_insatisfecho"> Muy insatisfecho</label>
+                    <label><input type="radio" name="escritorios" value="insatisfecho"> Insatisfecho</label>
+                    <label><input type="radio" name="escritorios" value="regular"> Regular</label>
+                </div>
+            </div>
+            <div class="item">
+                <h2>Infraestructura (Techo, Pared, Pisos)</h2>
+                <div class="radio-group">
+                    <label><input type="radio" name="infraestructura" value="muy_insatisfecho"> Muy insatisfecho</label>
+                    <label><input type="radio" name="infraestructura" value="insatisfecho"> Insatisfecho</label>
+                    <label><input type="radio" name="infraestructura" value="regular"> Regular</label>
+                </div>
+            </div>
+        </div>
+
+        <!-- Fila intermedia con 4 cuadros -->
+        <div class="row">
+            <div class="item">
+                <h2>Persianas</h2>
+                <div class="radio-group">
+                    <label><input type="radio" name="persianas" value="muy_insatisfecho"> Muy insatisfecho</label>
+                    <label><input type="radio" name="persianas" value="insatisfecho"> Insatisfecho</label>
+                    <label><input type="radio" name="persianas" value="regular"> Regular</label>
+                </div>
+            </div>
+            <div class="item">
+                <h2>Pizarrón</h2>
+                <div class="radio-group">
+                    <label><input type="radio" name="pizarron" value="muy_insatisfecho"> Muy insatisfecho</label>
+                    <label><input type="radio" name="pizarron" value="insatisfecho"> Insatisfecho</label>
+                    <label><input type="radio" name="pizarron" value="regular"> Regular</label>
+                </div>
+            </div>
+            <div class="item">
+                <h2>Puertas y Ventanas</h2>
+                <div class="radio-group">
+                    <label><input type="radio" name="puertas_ventanas" value="muy_insatisfecho"> Muy insatisfecho</label>
+                    <label><input type="radio" name="puertas_ventanas" value="insatisfecho"> Insatisfecho</label>
+                    <label><input type="radio" name="puertas_ventanas" value="regular"> Regular</label>
+                </div>
+            </div>
+            <div class="item">
+                <h2>Instalación Hidrosanitaria</h2>
+                <div class="radio-group">
+                    <label><input type="radio" name="hidrosanitaria" value="muy_insatisfecho"> Muy insatisfecho</label>
+                    <label><input type="radio" name="hidrosanitaria" value="insatisfecho"> Insatisfecho</label>
+                    <label><input type="radio" name="hidrosanitaria" value="regular"> Regular</label>
+                </div>
+            </div>
+        </div>
+
+        <!-- Botón para redirigir -->
+        <button onclick="location.href='quinta_pagina.html'">Enviar Respuestas</button>
+    </div>
+</body>
+</html>
