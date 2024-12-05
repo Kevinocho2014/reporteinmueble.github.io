@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Reporte de Inmuebles</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background: linear-gradient(45deg, #fcb900, #ff4b3e, #9b59b6); /* Gradiente de amarillo, rojo y violeta */
+            color: white;
+            text-align: center;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            background-size: cover;
+            background-repeat: no-repeat;
+            background-position: center;
+            overflow: auto; /* Habilitar barra de desplazamiento */
+        }
+
+        .logo {
+            margin-top: -20px;
+            width: 200px; /* Fija el tamaño del logo */
+        }
+
+        .content {
+            max-width: 600px;
+            width: 90%;
+            padding: 20px;
+            background-color: rgba(0, 0, 0, 0.7); /* Fondo oscuro con transparencia */
+            border-radius: 10px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5);
+            margin-top: 20px;
+            max-height: 90vh; /* Limitar la altura del contenedor */
+            overflow: auto; /* Habilitar el desplazamiento dentro del contenido */
+        }
+
+        h1 {
+            font-size: 2rem;
+            margin-bottom: 20px;
+            color: #fff;
+            text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.3);
+        }
+
+        p {
+            font-size: 1.2rem;
+            color: #d1c2d7;
+            line-height: 1.6;
+        }
+
+        button {
+            margin-top: 20px;
+            padding: 15px 30px;
+            font-size: 16px;
+            color: white;
+            background-color: #9b59b6; /* Color violeta */
+            border: 2px solid #9b59b6; /* Borde violeta */
+            border-radius: 5px;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+            width: 100%; /* Botón de ancho completo en pantallas pequeñas */
+            max-width: 250px; /* Limita el tamaño del botón en pantallas grandes */
+        }
+
+        button:hover {
+            background-color: white;
+            color: #9b59b6; /* Color violeta al hacer hover */
+            transform: scale(1.05); /* Efecto de animación al hacer hover */
+        }
+
+        /* Animación de ondas en el fondo */
+        @keyframes waveAnimation {
+            0% { transform: translateX(0); }
+            100% { transform: translateX(-100%); }
+        }
+
+        .wave {
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 100%;
+            height: 100px;
+            background: url('https://www.transparenttextures.com/patterns/diagonal-stripes.png') repeat-x;
+            animation: waveAnimation 5s linear infinite;
+            z-index: -1;
+        }
+
+        /* Media queries para mejorar la visualización en pantallas pequeñas */
+        @media (max-width: 768px) {
+            h1 {
+                font-size: 1.5rem;
+            }
+
+            p {
+                font-size: 1rem;
+            }
+
+            button {
+                padding: 12px 25px;
+                font-size: 14px;
+            }
+        }
+
+        @media (max-width: 480px) {
+            h1 {
+                font-size: 1.2rem;
+            }
+
+            p {
+                font-size: 0.9rem;
+            }
+
+            button {
+                padding: 10px 20px;
+                font-size: 12px;
+            }
+
+            .logo {
+                width: 150px; /* Ajuste del logo en pantallas más pequeñas */
+            }
+        }
+
+    </style>
+</head>
+<body>
+    <div class="wave"></div>
+    <img src="logo.png" alt="Logo UVP" class="logo">
+    <div class="content">
+        <h1>¡Bienvenido a la página de reporte de inmuebles del salón!</h1>
+        <p>
+            Si necesitas reportar algún detalle o problema relacionado con el salón, estás en el lugar correcto.
+            Para facilitar tu reporte, haz clic en el botón ubicado en la parte inferior de esta página y completa
+            la información solicitada. Tu colaboración es muy importante para mantener este espacio en óptimas condiciones.
+        </p>
+        <p>¡Gracias por tu apoyo!</p>
+        <button onclick="location.href='reporte.html'">Reportar Inmueble</button>
+    </div>
+</body>
+</html>

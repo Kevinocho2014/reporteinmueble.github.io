@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gracias</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background: linear-gradient(45deg, #fcb900, #ff4b3e, #9b59b6); /* Fondo difuminado */
+            color: white;
+            text-align: center;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            background-size: cover;
+            background-repeat: no-repeat;
+            background-position: center;
+        }
+
+        h1 {
+            font-size: 2.5rem;
+            color: #fff;
+            margin-top: 50px;
+            text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.3);
+        }
+
+        .message {
+            background-color: rgba(0, 0, 0, 0.7); /* Fondo oscuro con transparencia */
+            padding: 20px;
+            margin-top: 20px;
+            max-width: 800px;
+            width: 90%;
+            border-radius: 10px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+            color: white;
+        }
+
+        .footer {
+            font-size: 1.2rem;
+            margin-top: 30px;
+            padding: 20px;
+            background-color: #9b59b6;
+            color: white;
+            border-radius: 10px;
+            max-width: 800px;
+            width: 90%;
+            text-align: center;
+        }
+
+        .footer p {
+            margin: 0;
+        }
+
+        /* Media queries para mejorar la visualización en pantallas pequeñas */
+        @media (max-width: 768px) {
+            h1 {
+                font-size: 2rem;
+            }
+
+            .message p {
+                font-size: 1rem;
+            }
+
+            .footer {
+                font-size: 1rem;
+                padding: 15px;
+            }
+        }
+
+        @media (max-width: 480px) {
+            h1 {
+                font-size: 1.5rem;
+            }
+
+            .message p {
+                font-size: 0.9rem;
+            }
+
+            .footer {
+                font-size: 0.9rem;
+                padding: 10px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <h1>MUCHAS GRACIAS</h1>
+
+    <div class="message">
+        <p>¡Gracias por enviar tu reporte!</p>
+        <p>Tu solicitud ha sido recibida y será atendida por el equipo correspondiente. Nos comprometemos a resolver el problema en un plazo de X días. Si necesitas hacer un seguimiento o tienes alguna duda adicional, no dudes en ponerte en contacto con nosotros.</p>
+        <p>Agradecemos tu colaboración para mantener el salón en óptimas condiciones.</p>
+    </div>
+
+    <div class="footer">
+        <p>¡Gracias por tu colaboración!</p>
+    </div>
+</body>
+</html>

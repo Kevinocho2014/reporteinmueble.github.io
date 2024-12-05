@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Reporte de Mantenimiento</title>
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            margin: 0;
+            padding: 0;
+            background: linear-gradient(45deg, #fcb900, #ff4b3e, #9b59b6); /* Gradiente de amarillo, rojo y violeta */
+            color: white;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            background-size: cover;
+            background-repeat: no-repeat;
+            background-position: center;
+        }
+
+        h1 {
+            margin-bottom: 20px;
+            font-size: 2.5rem;
+            color: #fff;
+            text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.3);
+        }
+
+        .container {
+            text-align: center;
+            max-width: 800px;
+            padding: 20px;
+            background-color: rgba(0, 0, 0, 0.7);
+            border-radius: 10px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5);
+            width: 90%; /* Ajuste de ancho para pantallas pequeñas */
+        }
+
+        .button-container {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            margin-bottom: 20px;
+        }
+
+        .button-container button {
+            background-color: #5e4b8b;
+            border: none;
+            padding: 15px 40px;
+            margin: 15px 0;
+            font-size: 16px;
+            cursor: pointer;
+            color: white;
+            border-radius: 10px;
+            transition: background-color 0.3s, transform 0.3s;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+            width: 80%; /* Ajuste de ancho para botones */
+        }
+
+        .button-container button:hover {
+            background-color: #8761b0;
+            transform: scale(1.05);
+        }
+
+        .description {
+            margin-top: 10px;
+            font-size: 14px;
+            color: #b0a2cb;
+            line-height: 1.5;
+        }
+
+        .description p {
+            margin: 5px 0;
+        }
+
+        .footer {
+            margin-top: 40px;
+            color: #b0a2cb;
+            text-align: center;
+        }
+
+        .footer a {
+            color: #5e4b8b;
+            text-decoration: none;
+            font-weight: bold;
+            transition: color 0.3s;
+        }
+
+        .footer a:hover {
+            color: #8761b0;
+        }
+
+        /* Animación de ondas en el fondo */
+        @keyframes waveAnimation {
+            0% { transform: translateX(0); }
+            100% { transform: translateX(-100%); }
+        }
+
+        .wave {
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 100%;
+            height: 100px;
+            background: url('https://www.transparenttextures.com/patterns/diagonal-stripes.png') repeat-x;
+            animation: waveAnimation 5s linear infinite;
+            z-index: -1;
+        }
+
+        /* Media queries para pantallas más pequeñas */
+        @media (max-width: 768px) {
+            h1 {
+                font-size: 2rem;
+            }
+
+            .button-container button {
+                font-size: 14px;
+                padding: 12px 30px;
+                width: 90%; /* Ajuste para pantallas medianas */
+            }
+
+            .description {
+                font-size: 12px;
+            }
+
+            .footer {
+                font-size: 1rem;
+                padding: 15px;
+            }
+        }
+
+        @media (max-width: 480px) {
+            h1 {
+                font-size: 1.5rem;
+            }
+
+            .button-container button {
+                font-size: 12px;
+                padding: 10px 20px;
+                width: 95%; /* Ajuste para pantallas pequeñas */
+            }
+
+            .description {
+                font-size: 10px;
+            }
+
+            .footer {
+                font-size: 0.9rem;
+                padding: 10px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="wave"></div>
+    <div class="container">
+        <h1>¿Qué deseas reportar?</h1>
+        <div class="button-container">
+            <!-- Botón para redirigir a Planta Física y Mantenimiento -->
+            <a href="cuarta_pagina.html">
+                <button>Planta Física y Mantenimiento</button>
+            </a>
+            <div class="description">
+                <p>El departamento de Planta Física y Mantenimiento se encarga de asegurar que los elementos físicos del salón se mantengan en óptimas condiciones. Esto incluye los contactos eléctricos, sillas, escritorios, infraestructura general (paredes, techos, pisos), cortinas, persianas, pizarrones, puertas, ventanas, iluminación, así como el sistema de aire acondicionado o ventilación.</p>
+            </div>
+            
+            <!-- Botón para redirigir a Sistemas -->
+            <a href="tercera_pagina.html">
+                <button>Sistemas</button>
+            </a>
+            <div class="description">
+                <p>El departamento de Sistemas gestiona y supervisa los equipos tecnológicos necesarios para el funcionamiento del salón, como la computadora, el proyector, el cableado de red, las conexiones eléctricas y de datos, el enrutador de internet, las bocinas o sistema de sonido, la pantalla para proyecciones y los equipos de videoconferencia.</p>
+            </div>
+        </div>
+    </div>
+    <div class="footer">
+        <p>Gracias por colaborar con el mantenimiento de nuestros espacios. Para más información visita nuestra <a href="#">Página Oficial UVP</a>.</p>
+    </div>
+</body>
+</html>
